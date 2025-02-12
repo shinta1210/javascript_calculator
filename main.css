@@ -1,0 +1,22 @@
+.display{
+  background-color: black;
+  color: white;
+  width: 417px;
+}
+
+button{
+  width: 100px;
+}
+
+.buttons{
+  display: block;
+  width: 500px;
+}
+
+#allClearButton{
+  width: 205px;
+}
+
+#resultButton{
+  width: 205px;
+}

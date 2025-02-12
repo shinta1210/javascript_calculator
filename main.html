@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>電卓</title>
+  </head>
+
+  <body>
+    <div class="display">
+      <span id="displayValue">0</span>
+    </div>
+
+    <div class="buttons">
+
+      <button onclick="onclickValueInput('7')" class="valueButton">7</button>
+      <button onclick="onclickValueInput('8')" class="valueButton">8</button>
+      <button onclick="onclickValueInput('9')" class="valueButton">9</button>
+      <button onclick="OperatorInput('+')" class="operator">+</button>
+
+      <button onclick="onclickValueInput('4')" class="valueButton">4</button>
+      <button onclick="onclickValueInput('5')" class="valueButton">5</button>
+      <button onclick="onclickValueInput('6')" class="valueButton">6</button>
+      <button onclick="OperatorInput('-')" class="operator" id="minus">-</button>
+
+      <button onclick="onclickValueInput('1')" class="valueButton">1</button>
+      <button onclick="onclickValueInput('2')" class="valueButton">2</button>
+      <button onclick="onclickValueInput('3')" class="valueButton">3</button>
+      <button onclick="OperatorInput('×')" class="operator">×</button>
+
+      <button onclick="onclickValueInput('0')" class="valueButton" id="zero">0</button>
+      <button onclick="onclickValueInput('00')" class="valueButton" id="zerozero">00</button>
+      <button onclick="onclickValueInput('.')"  id="dotto">.</button>
+      <button onclick="OperatorInput('÷')" class="operator">÷</button>
+
+      <button id="allClearButton">AC</button>
+      <button onclick="onclickResult()" class="resultButton">=</button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
