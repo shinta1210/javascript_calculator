@@ -12,7 +12,7 @@ let operatorValue = '';
 // 「.」入力可否判別フラグ
 dottoFlag = false;
 
-//初期画面遷移
+// 初期画面遷移
 initialDisplay();
 
 
@@ -27,7 +27,7 @@ function initialDisplay(){
 }
 
 
-/////////////　　数値入力時処理関数　　////////////////////
+///////////// 数値入力時処理関数　　////////////////////
 function onclickValueInput(value){
   // 入力値をvalueMemory配列に一文字ずつ格納
   // 演算子が入力前は数値１、入力後は数値２に格納
@@ -81,6 +81,8 @@ function calculateValue(value1, value2){
   return IntValueMemory1;
 }
 
+
+///////////　「=」入力時処理関数　　///////////////////////////////
 function onclickResult(){
   // 計算のため数値に変換
   IntValueMemory1 = Number(arrayValueMemory1.join(''));
@@ -132,7 +134,7 @@ $(document).ready(function(){
     $('#allClearButton').prop('disabled',false);    //AC
   });
 
-  //////////// 「０」　入力時ボタン有効無効整理 //////////////////////////////////
+  //////////// 「０」入力時ボタン有効無効整理 //////////////////////////////////
   $("#zero").click(function() {
     // 先頭文字で０がの時、数値が連続しないようにする
     if((arrayValueMemory1[0] == '0') &&  (arrayValueMemory1[1] == null) || (arrayValueMemory2[0] == '0') && (arrayValueMemory2[1] == null)){
@@ -140,14 +142,14 @@ $(document).ready(function(){
     }
   });
 
-  ///////////////// 「＝」入力時処理関数　　/////////////////////////////////////
+  ///////////// 「＝」入力時処理関数　　///////////////////////////////////////
   $(".resultButton").click(function() {
     $('button').prop('disabled',true);
     $('.operator').prop('disabled',false);          //演算子
     $('#allClearButton').prop('disabled',false);    //AC
   });
 
- ///////////////// 「AC」　ボタン押下後処理関数 //////////////////////////////////
+ ////////////// 「AC」ボタン押下後処理関数 /////////////////////////////////////
   $("#allClearButton").click(function() {
     // 変数初期化
     arrayValueMemory1 = [];
